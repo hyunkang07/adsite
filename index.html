@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7f4">
+    <meta name="description" content="텍스트의 글자 수와 단어 수를 실시간으로 확인하는 글자수세기 도구입니다.">
+    <title>글자수세기 | 문장 도구</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/commons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="inner header-inner">
+            <a class="logo" href="index.html" aria-label="문장 도구 홈">
+                <span class="logo-mark" aria-hidden="true">문</span>
+                <span>문장 도구</span>
+            </a>
+            <nav class="nav" aria-label="주 메뉴">
+                <a class="nav-link is-current" href="index.html" aria-current="page">글자수세기</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="counter-section inner" aria-labelledby="page-title">
+            <div class="page-intro">
+                <p class="eyebrow">TEXT COUNTER</p>
+                <h1 class="section-title" id="page-title">글자수세기</h1>
+                <p class="section-description">텍스트를 입력하면 글자 수와 단어 수를 바로 확인할 수 있어요.</p>
+            </div>
+
+            <div class="counter-tool">
+                <div class="textarea-wrap">
+                    <label class="sr-only" for="text-input">글자 수를 셀 텍스트</label>
+                    <textarea
+                        id="text-input"
+                        class="text-input"
+                        placeholder="여기에 텍스트를 입력하거나 붙여넣으세요."
+                        spellcheck="false"
+                        aria-describedby="input-hint"
+                    ></textarea>
+                    <div class="input-footer">
+                        <p class="input-hint" id="input-hint">입력한 내용은 저장되지 않습니다.</p>
+                        <span class="input-indicator" aria-hidden="true"><span></span> 실시간 계산</span>
+                    </div>
+                </div>
+
+                <dl class="count-grid" aria-label="텍스트 통계">
+                    <div class="count-item count-item-primary">
+                        <dt>전체 글자 수</dt>
+                        <dd><output id="total-count" aria-live="polite">0</output><span>자</span></dd>
+                    </div>
+                    <div class="count-item">
+                        <dt>공백 포함</dt>
+                        <dd><output id="with-space-count">0</output><span>자</span></dd>
+                    </div>
+                    <div class="count-item">
+                        <dt>공백 제외</dt>
+                        <dd><output id="without-space-count">0</output><span>자</span></dd>
+                    </div>
+                    <div class="count-item">
+                        <dt>단어 수</dt>
+                        <dd><output id="word-count">0</output><span>개</span></dd>
+                    </div>
+                </dl>
+
+                <div class="tool-actions">
+                    <p class="action-message" id="action-message" role="status" aria-live="polite"></p>
+                    <div class="button-group">
+                        <button class="btn btn-secondary" id="reset-button" type="button">초기화</button>
+                        <button class="btn btn-primary" id="copy-button" type="button">
+                            <svg class="button-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <rect x="7" y="7" width="9" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5" />
+                                <path d="M12.5 7V4.5A1.5 1.5 0 0 0 11 3H5.5A1.5 1.5 0 0 0 4 4.5v7A1.5 1.5 0 0 0 5.5 13H7" stroke="currentColor" stroke-width="1.5" />
+                            </svg>
+                            텍스트 복사
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="inner footer-inner">
+            <p>필요한 문장을 간편하게 다듬어 보세요.</p>
+            <span>문장 도구</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* ========================================
+   Normalize
+======================================== */
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+button,
+textarea {
+    letter-spacing: inherit;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(34, 112, 83, 0.35);
+    outline-offset: 3px;
+}
