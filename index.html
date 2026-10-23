@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f5f7f4">
+
     <meta name="description" content="텍스트의 글자 수와 단어 수를 실시간으로 확인하는 글자수세기 도구입니다.">
     <title>글자수세기 | 문장 도구</title>
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -11,7 +13,11 @@
     <link rel="stylesheet" href="assets/css/commons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js" defer></script>
+
+
+    <meta name="google-site-verification" content="1RE3K7TnAZpmkwDXEQ_M0g8T6r9N8BvvAVYpHRXLoag" />
 </head>
+
 <body>
     <header class="header">
         <div class="inner header-inner">
@@ -36,13 +42,8 @@
             <div class="counter-tool">
                 <div class="textarea-wrap">
                     <label class="sr-only" for="text-input">글자 수를 셀 텍스트</label>
-                    <textarea
-                        id="text-input"
-                        class="text-input"
-                        placeholder="여기에 텍스트를 입력하거나 붙여넣으세요."
-                        spellcheck="false"
-                        aria-describedby="input-hint"
-                    ></textarea>
+                    <textarea id="text-input" class="text-input" placeholder="여기에 텍스트를 입력하거나 붙여넣으세요." spellcheck="false"
+                        aria-describedby="input-hint"></textarea>
                     <div class="input-footer">
                         <p class="input-hint" id="input-hint">입력한 내용은 저장되지 않습니다.</p>
                         <span class="input-indicator" aria-hidden="true"><span></span> 실시간 계산</span>
@@ -74,8 +75,11 @@
                         <button class="btn btn-secondary" id="reset-button" type="button">초기화</button>
                         <button class="btn btn-primary" id="copy-button" type="button">
                             <svg class="button-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                                <rect x="7" y="7" width="9" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5" />
-                                <path d="M12.5 7V4.5A1.5 1.5 0 0 0 11 3H5.5A1.5 1.5 0 0 0 4 4.5v7A1.5 1.5 0 0 0 5.5 13H7" stroke="currentColor" stroke-width="1.5" />
+                                <rect x="7" y="7" width="9" height="10" rx="1.5" stroke="currentColor"
+                                    stroke-width="1.5" />
+                                <path
+                                    d="M12.5 7V4.5A1.5 1.5 0 0 0 11 3H5.5A1.5 1.5 0 0 0 4 4.5v7A1.5 1.5 0 0 0 5.5 13H7"
+                                    stroke="currentColor" stroke-width="1.5" />
                             </svg>
                             텍스트 복사
                         </button>
@@ -92,4 +96,5 @@
         </div>
     </footer>
 </body>
+
 </html>
