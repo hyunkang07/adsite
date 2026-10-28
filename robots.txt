@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hyunkang07.github.io/adsite/sitemap.xml
+Sitemap: https://adsite-eosin.vercel.app/sitemap.xml
