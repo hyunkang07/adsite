@@ -52,9 +52,93 @@
     min-height: calc(100vh - 148px);
 }
 
+/* ========================================
+   쿠팡 파트너스 배너 영역
+======================================== */
+
+.ad-header-banner {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+}
+
+.ad-banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.ad-pc {
+    display: flex;
+    justify-content: center;
+    width: 680px;
+    min-height: 140px;
+}
+
+.ad-mo {
+    display: none;
+    justify-content: center;
+    width: 280px;
+    min-height: 140px;
+}
+
+.ad-pc iframe,
+.ad-mo iframe {
+    display: block;
+    border: 0;
+}
+
+/* 마퀴 안내 문구 스타일 (폰트사이즈 10px, 오른쪽 -> 왼쪽 흐름) */
+.ad-marquee-wrap {
+    width: 100%;
+    max-width: 680px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 10px;
+    user-select: none;
+}
+
+.ad-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 24s linear infinite;
+}
+
+.ad-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.ad-marquee-group {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px;
+}
+
+.ad-marquee-group span {
+    font-size: 10px;
+    color: var(--color-muted);
+    letter-spacing: -0.2px;
+}
+
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ========================================
+   글자수세기 섹션
+======================================== */
+
 .counter-section {
     max-width: 820px;
-    padding-top: 72px;
+    padding-top: 36px;
     padding-bottom: 84px;
 }
 
@@ -245,8 +329,24 @@
 ======================================== */
 
 @media (max-width: 768px) {
+    .ad-header-banner {
+        padding-top: 20px;
+    }
+
+    .ad-pc {
+        display: none;
+    }
+
+    .ad-mo {
+        display: flex;
+    }
+
+    .ad-marquee-wrap {
+        max-width: 280px;
+    }
+
     .counter-section {
-        padding-top: 56px;
+        padding-top: 28px;
         padding-bottom: 64px;
     }
 
@@ -265,7 +365,7 @@
     }
 
     .counter-section {
-        padding-top: 42px;
+        padding-top: 24px;
         padding-bottom: 48px;
     }
 
